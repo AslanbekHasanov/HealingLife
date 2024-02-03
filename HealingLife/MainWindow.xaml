@@ -1,0 +1,87 @@
+﻿<Window x:Class="HealingLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HealingLife"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="585" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <!--Birinchi qism-->
+        <StackPanel Grid.Column="0" Margin="10 20 10 10">
+            <StackPanel>
+                <TextBlock Text="Shifoxona nomini kirting" Margin="0 0 0 5"/>
+                <TextBox Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="Manzil"  Margin="0 0 0 5"/>
+                <TextBox AcceptsReturn ="true" TextWrapping="Wrap" Height="70" Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin ="0 5 0 0">
+                <TextBlock Text="Ochilish vaqti (00:00)" Margin="0 0 0 5"/>
+                <TextBox Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="So'rovlar soni" Margin="0 0 0 5"/>
+                <TextBox IsReadOnly="true" Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="Shifoxona paroli" Margin="0 0 0 5"/>
+                <TextBox IsReadOnly="true" Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="Shifoxona locatsiyasi" Margin="0 0 0 5"/>
+                <TextBox IsReadOnly="true" Padding="5"/>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="Yunalish turlari" Margin="0 5 0 5"/>
+                <DockPanel>
+                    <CheckBox Content ="Covid19Test"/>
+                    <CheckBox Content ="MCKT" Margin="20 0 0 0"/>
+                    <CheckBox Content ="Kislorod" Margin="20 0 0 0"/>
+                </DockPanel>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <TextBlock Text="Ish kunlari" Margin="0 5 0 5"/>
+                <ComboBox SelectedIndex="0">
+                    <ComboBoxItem Content="Dushanba"/>
+                    <ComboBoxItem Content="Seshanba "/>
+                    <ComboBoxItem Content="Chorshanba"/>
+                    <ComboBoxItem Content="Payshanba"/>
+                    <ComboBoxItem Content="Juma"/>
+                    <ComboBoxItem Content="Shanba"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 5 0 0">
+                <Button Margin="200 20 0 0" Content="Saqlash/Yangilash" Width="150" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+        <!--Ikkinchi qism-->
+        <StackPanel Grid.Column="1" Margin="10 20 10 10">
+            <StackPanel>
+                <TextBlock Text="Shifoxonalar ro'yxati" />
+                <ListBox Height="60" ScrollViewer.VerticalScrollBarVisibility ="Visible">
+                    <ListBoxItem Content="Darmon"/>
+                    <ListBoxItem Content="Info"/>
+                    <ListBoxItem Content="Shifo"/>
+                    <ListBoxItem Content="Gold"/>
+                </ListBox>
+            </StackPanel>
+            <StackPanel Margin="0 140">
+                <TextBlock Text="Hatoliklar" Margin="0 0 0 7" />
+                <ListBox Height="25" ScrollViewer.VerticalScrollBarVisibility ="Visible">
+                    <ListBoxItem Content="Darmon"/>
+                    <ListBoxItem Content="Info"/>
+                    <ListBoxItem Content="Shifo"/>
+                    <ListBoxItem Content="Gold"/>
+                </ListBox>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
